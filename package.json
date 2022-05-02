@@ -14,6 +14,7 @@
     "start": "tsdx watch",
     "build": "tsdx build",
     "test": "tsdx test --passWithNoTests",
+    "test:watch": "tsdx test --watch",
     "lint": "tsdx lint",
     "prepare": "tsdx build",
     "size": "size-limit",
@@ -33,6 +34,11 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
+  "repository": {
+    "url": "https://github.com/tlacalv/tla-product-card",
+    "type": "git"
+  },
+  "homepage": "https://www.tlacadev.com/",
   "name": "tla-product-card",
   "author": "Tlacaelel Leon",
   "module": "dist/tla-product-card.esm.js",
@@ -52,6 +58,7 @@
     "@types/react": "^18.0.8",
     "@types/react-dom": "^18.0.0",
     "husky": "^7.0.4",
+    "identity-obj-proxy": "^3.0.0",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",
     "rollup-plugin-postcss": "^4.0.2",
@@ -59,5 +66,18 @@
     "tsdx": "^0.14.1",
     "tslib": "^2.4.0",
     "typescript": "^3.9.10"
+  },
+  "keywords": [
+    "product",
+    "card",
+    "tlacaelel",
+    "leon"
+  ],
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "identity-obj-proxy",
+      "\\.(css|less|scss|sass)$": "identity-obj-proxy",
+      "^react($|/.+)": "<rootDir>/node_modules/react$1"
+    }
   }
 }
